@@ -1,0 +1,20 @@
+<section>
+  {{#if error}}
+        <p class="error">{{error}}</p>
+  {{else}}
+    <h2>{{title}}</h2>
+    <div class="spacer">
+        <h3>Edit history</h3>
+        <ul>
+          {{#each edits}}
+          <li>
+              <a href="/articles/history/read/{{id}}">{{creationDate}}</a> by
+              <span class="author">{{author.email}}</span>
+          </li>
+          {{else}}
+            <p>There are no edits for this article.</p>
+          {{/each}}
+        </ul>
+    </div>
+  {{/if}}
+</section>

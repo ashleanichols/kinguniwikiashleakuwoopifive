@@ -1,0 +1,19 @@
+<div class="spacer">
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{else}}
+    <h2>{{title}}
+      <div class="controls">
+        {{#if user}}
+          <a href="/articles/edit/{{id}}">[edit]</a>
+        {{/if}}
+          <a href="/articles/history/{{id}}">[history]</a>
+      </div>
+    </h2>
+    <article>
+      {{#each paragraphs}}
+        <p>{{this}}</p>
+      {{/each}}
+    </article>
+  {{/if}}
+</div>

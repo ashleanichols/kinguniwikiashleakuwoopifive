@@ -1,0 +1,28 @@
+<section id="featured">
+  <h2>Latest article</h2>
+  {{#if latest}}
+  <article>
+    <h3>{{latest.title}}</h3>
+    <p>
+        {{latest.content}}
+    </p>
+    <div class="controls">
+        <a href="/articles/read/{{latest.id}}">Read more</a>
+    </div>
+  </article>
+  {{else}}
+    <p>There are no articles. <a href="/articles/create">Add some</a></p>
+  {{/if}}
+</section>
+<section id="recent">
+  <h2>Recently added articles</h2>
+  <ul>
+    {{#each recent}}
+      <li>
+        <a href="/articles/read/{{id}}">{{title}}</a>
+      </li>
+    {{else}}
+      <li>There are no recent articles :(</li>
+    {{/each}}
+  </ul>
+</section>

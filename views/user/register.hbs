@@ -1,0 +1,18 @@
+<section>
+  <h2>Register</h2>
+  <br>
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{/if}}
+  <div class="spacer">
+    <form method="POST">
+        <label>Email:</label>
+        <input type="text" name="email" value="{{email}}">
+        <label>Password:</label>
+        <input type="password" name="password" value="{{password}}">
+        <label>Repeat password:</label>
+        <input type="password" name="confirmedPassword">
+        <input type="submit" value="Register">
+    </form>
+  </div>
+</section>

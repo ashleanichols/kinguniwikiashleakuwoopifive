@@ -1,0 +1,16 @@
+<section>
+  <h2>Search results for: "{{searchTerm}}"</h2>
+  <div class="spacer">
+      <ul>
+        {{#each articles}}
+          <li>
+              <a href="/articles/read/{{id}}">{{title}}</a>
+          </li>
+        {{else}}
+          <li>
+            There are no matches :(
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+</section>
